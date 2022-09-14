@@ -14,14 +14,17 @@ ion-header {
 }
 
 ion-content {
+    --background: #ecf3fb;
     .totalizador {
         display: flex;
         flex-direction: column;
         align-items: center;
+        background: white;
         ion-label {
             color: #686868;
             margin-top: 10px;
             font-size: 14px;
+            font-weight: bold;
         }
         ion-text {
             font-size: 26px;
@@ -36,36 +39,32 @@ ion-content {
             color: #747474;
         }
     }
-    .receita-despesa {
-        ion-list {
+    .receita-despesa { 
+        height: 80px;
+        background: white;
+        border-radius: 0px 0px 30px 30px;
+        box-shadow: 1px 2px 2px #dee2e7;
+        ion-grid {
             ion-row {
-                ion-col:nth-child(1) {
-                    border: red 2px dashed;
-                    padding: 10px;
-                    ion-avatar {
-                        background: #4cb050;
-                        height: 50px;
-                        width: 50px;
-                        ion-icon {
-                            margin-left: 30%;
-                            margin-top: 30%;
-                            color: white;
-                            font-size: 20px;
-                        }
+                ion-col {
+                    display: flex;
+                    align-items: center;
+                    ion-icon:nth-child(1) {
+                        background: transparent;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        color: white;
+                        padding: 6px;
+                        margin-right: 10px;
+                        font-size: 600px;
                     }
-                }
-                ion-col:nth-child(2) {
-                    border: red 2px dashed;
-                    padding: 10px;
-                    ion-avatar {
-                        background: #f34135;
-                        height: 50px;
-                        width: 50px;
-                        ion-icon {
-                            margin-left: 30%;
-                            margin-top: 30%;
-                            color: white;
-                            font-size: 20px;
+                    ion-label {
+                        color: #646464;
+                        font-weight: 500;
+                        font-size: 12px;
+                        p {
+                            font-weight: 500;
                         }
                     }
                 }
