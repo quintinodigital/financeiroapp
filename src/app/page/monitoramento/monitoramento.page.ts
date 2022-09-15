@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-monitoramento',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonitoramentoPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public redirecionarTelaReceita() { 
+    this.router.navigateByUrl("receita");
+  }
+
+  public redirecionarTelaDespesa() { 
+    this.router.navigateByUrl("despesa");
   }
 
 }

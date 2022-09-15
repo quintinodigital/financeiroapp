@@ -33,14 +33,14 @@
 
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col (click)="redirecionarTelaReceita()">
           <ion-icon name="arrow-up-outline" style="background: #4cb050;"></ion-icon>
           <ion-label>
             Receitas 
             <p style="color: #4cb050;">R$ 10.000,00</p>
           </ion-label>
         </ion-col>
-        <ion-col>
+        <ion-col (click)="redirecionarTelaDespesa()">
           <ion-icon name="arrow-down-outline" style="background: #f6403a;"></ion-icon>
           <ion-label>
             Despesas 
