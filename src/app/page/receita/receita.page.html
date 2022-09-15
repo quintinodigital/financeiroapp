@@ -1,0 +1,81 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-title>Receitas</ion-title>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="search-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="funnel-outline"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon name="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+  <div class="periodo">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button>
+          <ion-icon name="chevron-back-outline" class="ion-text-right"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title class="ion-text-center">Setembro</ion-title>
+      <ion-buttons slot="end">
+        <ion-button>
+          <ion-icon name="chevron-forward-outline" class="ion-text-left"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </div>
+
+  <div class="totalizador">
+
+    <ion-grid>
+      <ion-row>
+
+        <ion-col>
+          <ion-icon name="bag-outline"></ion-icon>
+          <ion-label>
+            Total Pendente
+            <p>R$ 00,00</p>
+          </ion-label>
+        </ion-col>
+
+        <ion-col>
+          <ion-icon name="wallet-outline"></ion-icon>
+          <ion-label>
+            Total Recebido
+            <p>R$ 00,00</p>
+          </ion-label>
+        </ion-col>
+
+        <ion-item-divider style="margin-top: -12px;"></ion-item-divider>
+
+      </ion-row>
+    </ion-grid>
+
+  </div>
+
+</ion-header>
+
+<ion-content>
+
+  <div class="sem-transacao-container" *ngIf="isSemTransacao">
+    <div class="imagem">
+      <img src="../../../assets/imagem/sem-cartao-credito.png"/>
+    </div>
+  
+    <div class="sem-transacao">
+      <ion-text>
+        Ops! Você não possuí transações registradas.
+        <p>Para criar um novo item, clique no botão (+)</p>
+      </ion-text>
+    </div>
+  </div>
+
+</ion-content>
