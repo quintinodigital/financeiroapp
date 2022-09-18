@@ -39,14 +39,10 @@ export class ReceitaPage implements OnInit {
     this.numeroMesCorrente = dataAtual.getMonth();
   }
 
-  public recuperarMesAnterior() { 
-    var indice = this.numeroMesCorrente;
-    if(indice === this.numeroMesCorrente) {
-      this.numeroMesCorrente--;
-    }
-    if(indice >= 0 && indice) {
-      console.log(indice);
-      return this.nomeMes = this.mesAnoList[indice].nome;
+  public recuperarMesAnterior() {
+    var indice = this.numeroMesCorrente--;
+    if(indice-1 >= 0) {
+      return this.nomeMes = this.mesAnoList[indice-1].nome;
     }
   }
 
