@@ -20,13 +20,13 @@
   <div class="periodo">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-button>
+        <ion-button (click)="recuperarMesAnterior()">
           <ion-icon name="chevron-back-outline" class="ion-text-right"></ion-icon>
         </ion-button>
       </ion-buttons>
-      <ion-title class="ion-text-center">Setembro</ion-title>
+      <ion-title class="ion-text-center">{{nomeMes}}</ion-title>
       <ion-buttons slot="end">
-        <ion-button>
+        <ion-button (click)="recuperarMesPosterior(1)">
           <ion-icon name="chevron-forward-outline" class="ion-text-left"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -76,6 +76,36 @@
         <p>Para criar um novo item, clique no botão (+)</p>
       </ion-text>
     </div>
+  </div>
+
+  <div class="tabmenu-receita">
+
+    <ion-tabs>
+      <ion-tab-bar>
+
+        <ion-tab-button>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Principal</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Principal</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Principal</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button>
+          <ion-icon name="person"></ion-icon>
+          <ion-label>Principal</ion-label>
+        </ion-tab-button>
+
+      </ion-tab-bar>
+    </ion-tabs>
+
   </div>
 
 </ion-content>
