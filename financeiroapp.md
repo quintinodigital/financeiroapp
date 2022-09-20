@@ -8,7 +8,7 @@
 
         - [x] Implementar protótipo da lista de Receitas na Tela Principal
         - [x] Implementar controle de Icones de acordo com a situação (Pago ou Pendente)
-        - [x] Implementar cáculos dos totalizadores de acordo com a situação (Pago ou Pendente)
+        - [x] Implementar cálculos dos totalizadores de acordo com a situação (Pago ou Pendente)
 
     # FINANCEIROAPP01XX092022HOTFIX
 
