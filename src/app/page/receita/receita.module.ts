@@ -1,11 +1,9 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-
 import { IonicModule } from '@ionic/angular';
-
+import { TabmenuPageModule } from './../../component/tabmenu/tabmenu.module';
 import { ReceitaPageRoutingModule } from './receita-routing.module';
-
 import { ReceitaPage } from './receita.page';
 
 @NgModule({
@@ -13,7 +11,8 @@ import { ReceitaPage } from './receita.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    ReceitaPageRoutingModule
+    ReceitaPageRoutingModule,
+    TabmenuPageModule
   ],
   declarations: [ReceitaPage]
 })

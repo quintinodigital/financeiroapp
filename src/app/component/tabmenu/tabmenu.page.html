@@ -1,0 +1,41 @@
+<ion-tabs #tabs (ionTabsDidChange)="setCurrentTab()">
+  <ion-tab-bar>
+
+    <ion-tab-button tab="monitoramento">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Principal</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button>
+      <ion-icon name="list-outline"></ion-icon>
+      <ion-label>Transações</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button>
+      <ion-icon name="calendar-outline"></ion-icon>
+      <ion-label>Planejamento</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button>
+      <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
+      <ion-label>Mais</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+</ion-tabs>
+
+<ion-fab vertical="bottom" horizontal="center">
+
+  <ion-fab-button color="tertiary" *ngIf="isButtonMonitoramento">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button color="success" *ngIf="isButtonReceita">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-button color="danger" *ngIf="isButtonDespesa">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+
+</ion-fab>

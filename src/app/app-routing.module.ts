@@ -4,21 +4,21 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'monitoramento',
+    redirectTo: 'tabmenu',
     pathMatch: 'full'
   },
   {
-    path: 'monitoramento',
-    loadChildren: () => import('./page/monitoramento/monitoramento.module').then( m => m.MonitoramentoPageModule)
+    path: 'tabmenu',
+    loadChildren: () => import('./component/tabmenu/tabmenu.module').then( m => m.TabmenuPageModule)
   },
-  {
-    path: 'despesa',
-    loadChildren: () => import('./page/despesa/despesa.module').then( m => m.DespesaPageModule)
-  },
-  {
-    path: 'receita',
-    loadChildren: () => import('./page/receita/receita.module').then( m => m.ReceitaPageModule)
-  },
+  // {
+  //   path: 'despesa',
+  //   loadChildren: () => import('./page/despesa/despesa.module').then( m => m.DespesaPageModule)
+  // },
+  // {
+  //   path: 'receita',
+  //   loadChildren: () => import('./page/receita/receita.module').then( m => m.ReceitaPageModule)
+  // },
 ];
 
 @NgModule({

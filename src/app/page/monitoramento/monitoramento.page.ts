@@ -15,11 +15,11 @@ export class MonitoramentoPage implements OnInit {
   ngOnInit() { }
 
   public redirecionarTelaReceita() { 
-    this.router.navigateByUrl("receita");
+    this.router.navigateByUrl("/tabmenu/receita");
   }
 
   public redirecionarTelaDespesa() { 
-    this.router.navigateByUrl("despesa");
+    this.router.navigateByUrl("/tabmenu/despesa");
   }
 
 }
