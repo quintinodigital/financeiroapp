@@ -7,7 +7,11 @@ const routes: Routes = [
   {
     path: '',
     component: ReceitaCadastrarPage
-  }
+  },
+  // {
+  //   path: "receita",
+  //   loadChildren: () => import('../../receita/receita.module').then( m => m.ReceitaPageModule)
+  // }
 ];
 
 @NgModule({

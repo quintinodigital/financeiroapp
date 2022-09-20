@@ -18,7 +18,7 @@ const routes: Routes = [
   {
     path: "despesa-cadastrar",
     loadChildren: () => import('./page/despesa/despesa-cadastrar/despesa-cadastrar.module').then( m => m.DespesaCadastrarPageModule)
-  }
+  },
 ];
 
 @NgModule({

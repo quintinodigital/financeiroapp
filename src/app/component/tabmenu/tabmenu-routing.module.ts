@@ -38,6 +38,24 @@ const routes: Routes = [
             loadChildren: () => import('../../page/despesa/despesa.module').then( m => m.DespesaPageModule)
           }
         ]        
+      },
+      {
+        path: 'transacao',
+        children: [
+          {
+            path: "",
+            loadChildren: () => import('../../page/transacao/transacao.module').then( m => m.TransacaoPageModule)
+          }
+        ]        
+      },
+      {
+        path: 'mais',
+        children: [
+          {
+            path: "",
+            loadChildren: () => import('../../page/mais/mais.module').then( m => m.MaisPageModule)
+          }
+        ]        
       }
     ]
   }
