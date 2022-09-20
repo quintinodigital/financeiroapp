@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonTabs } from '@ionic/angular';
 
@@ -14,7 +15,9 @@ export class TabmenuPage implements OnInit {
   public isButtonReceita: boolean = false;
   public isButtonDespesa: boolean = false;
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit() { }
 
@@ -34,7 +37,14 @@ export class TabmenuPage implements OnInit {
       this.isButtonDespesa = true;
       this.isButtonMonitoramento = false;
     }
-    console.log(this.tabs.getSelected());
+  }
+
+  public redirecionarTelaReceitaCadastrar() {
+    return this.router.navigateByUrl("receita-cadastrar");
+  }
+
+  public redirecionarTelaDespesaCadastrar() {
+    return this.router.navigateByUrl("despesa-cadastrar");
   }
 
 }

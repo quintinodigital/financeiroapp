@@ -30,11 +30,11 @@
     <ion-icon name="add-outline"></ion-icon>
   </ion-fab-button>
 
-  <ion-fab-button color="success" *ngIf="isButtonReceita">
+  <ion-fab-button color="success" *ngIf="isButtonReceita" (click)="redirecionarTelaReceitaCadastrar()">
     <ion-icon name="add-outline"></ion-icon>
   </ion-fab-button>
 
-  <ion-fab-button color="danger" *ngIf="isButtonDespesa">
+  <ion-fab-button color="danger" *ngIf="isButtonDespesa"  (click)="redirecionarTelaDespesaCadastrar()">
     <ion-icon name="add-outline"></ion-icon>
   </ion-fab-button>
 

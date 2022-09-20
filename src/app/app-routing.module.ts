@@ -11,14 +11,15 @@ const routes: Routes = [
     path: 'tabmenu',
     loadChildren: () => import('./component/tabmenu/tabmenu.module').then( m => m.TabmenuPageModule)
   },
-  // {
-  //   path: 'despesa',
-  //   loadChildren: () => import('./page/despesa/despesa.module').then( m => m.DespesaPageModule)
-  // },
-  // {
-  //   path: 'receita',
-  //   loadChildren: () => import('./page/receita/receita.module').then( m => m.ReceitaPageModule)
-  // },
+  {
+    path: "receita-cadastrar",
+    loadChildren: () => import('./page/receita/receita-cadastrar/receita-cadastrar.module').then( m => m.ReceitaCadastrarPageModule)
+  }
+  ,
+  {
+    path: "despesa-cadastrar",
+    loadChildren: () => import('./page/receita/receita-cadastrar/receita-cadastrar.module').then( m => m.ReceitaCadastrarPageModule)
+  }
 ];
 
 @NgModule({
