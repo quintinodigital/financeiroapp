@@ -6,7 +6,7 @@
 
     # FINANCEIROAPP0220092022FEATURE
 
-        - Implementar protótipo da lista de Receitas na Tela Principal 
+        - Implementar protótipo da lista de Receitas na Tela Principal
 
     # FINANCEIROAPP01XX092022HOTFIX
 
