@@ -14,11 +14,10 @@ const routes: Routes = [
   {
     path: "receita-cadastrar",
     loadChildren: () => import('./page/receita/receita-cadastrar/receita-cadastrar.module').then( m => m.ReceitaCadastrarPageModule)
-  }
-  ,
+  },
   {
     path: "despesa-cadastrar",
-    loadChildren: () => import('./page/receita/receita-cadastrar/receita-cadastrar.module').then( m => m.ReceitaCadastrarPageModule)
+    loadChildren: () => import('./page/despesa/despesa-cadastrar/despesa-cadastrar.module').then( m => m.DespesaCadastrarPageModule)
   }
 ];
 
