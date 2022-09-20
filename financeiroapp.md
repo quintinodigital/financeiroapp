@@ -1,8 +1,12 @@
 # Financeiro APP
 
-    + FINANCEIROAPP0120092022FEATURE 
+    + FINANCEIROAPP0120092022FEATURE
 
         - Finalizar as configurações de navegação no Tabmenu
+
+    + FINANCEIROAPP0220092022FEATURE
+
+        - Implementar lista de Receitas na Tela Principal 
 
     + FINANCEIROAPP01XX092022HOTFIX
 

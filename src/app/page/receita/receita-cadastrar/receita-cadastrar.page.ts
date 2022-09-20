@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RedirecionadorService } from './../../../service/redirecionador.service';
 
 @Component({
   selector: 'app-receita-cadastrar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitaCadastrarPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private redirecionadorService: RedirecionadorService
+  ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public redirecionarTelaAnterior() {
+    return this.redirecionadorService.redirecionarTelaAnterior();
   }
 
 }
