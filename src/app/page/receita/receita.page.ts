@@ -12,6 +12,8 @@ export class ReceitaPage implements OnInit {
 
   public nomeMes: String = "";
   public numeroMesCorrente: any = 0;
+  public totalTransacaoPaga = 0;
+  public totalTransacaoPendente: number = 0;
 
   public mesAnoList = [
     { nome: "Janeiro" },
@@ -32,7 +34,7 @@ export class ReceitaPage implements OnInit {
     {
       "codigo": 1,
       "pessoaOrigemPagamento": "Mirante Tecnologia da Informação",
-      "valorPagamento": "R$ 10.000,00",
+      "valorPagamento": 5000,
       "categoriaTransacao": "Salário",
       "contaBancariaDestino": "Banco do Brasil",
       "dataPagamento": "10/09/2022",
@@ -40,7 +42,7 @@ export class ReceitaPage implements OnInit {
     {
       "codigo": 2,
       "pessoaOrigemPagamento": "Django Comunicações",
-      "valorPagamento": "R$ 2.000,00",
+      "valorPagamento": 2000,
       "categoriaTransacao": "Renda Extra",
       "contaBancariaDestino": "Banco Santader",
       "dataPagamento": "",
@@ -48,7 +50,7 @@ export class ReceitaPage implements OnInit {
     {
       "codigo": 3,
       "pessoaOrigemPagamento": "Priscilla da Silva Mariano",
-      "valorPagamento": "R$ 1.000,00",
+      "valorPagamento": 1000,
       "categoriaTransacao": "Empréstimo",
       "contaBancariaDestino": "Banco Digio",
       "dataPagamento": "22/09/2022",
@@ -60,6 +62,7 @@ export class ReceitaPage implements OnInit {
   ngOnInit() { 
     this.nomeMes = this.mesAnoList[8].nome;
     this.recuperarNumeroMesCorrente();
+    this.calcularTotalValorTransacoesPagasPendentes();
   }
 
   private recuperarNumeroMesCorrente() {
@@ -94,6 +97,17 @@ export class ReceitaPage implements OnInit {
     } else {
       return "isTransacaoPaga";
     }
+  }
+
+  public calcularTotalValorTransacoesPagasPendentes() {
+    this.receitaList.filter((response) => {
+      if(response.dataPagamento == '') {
+        this.totalTransacaoPendente += response.valorPagamento;
+      }
+      if(response.dataPagamento != '') {
+        this.totalTransacaoPaga += response.valorPagamento;
+      }
+    });
   }
 
 }
