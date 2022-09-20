@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReceitaPage implements OnInit {
 
-  public isSemTransacao = true;
+  public isSemTransacao = false;
+  public isPagamentoPendente = false;
 
   public nomeMes: String = "";
   public numeroMesCorrente: any = 0;
@@ -48,6 +49,14 @@ export class ReceitaPage implements OnInit {
 
   public recuperarMesPosterior(indice: number) { 
     return this.nomeMes = this.mesAnoList[this.numeroMesCorrente+indice].nome
+  }
+
+  public isVerificarPagamentoPendente() {
+    if(this.isPagamentoPendente) {
+      return "pin-outline";
+    } else {
+      return "checkmark-outline";
+    }
   }
 
 }

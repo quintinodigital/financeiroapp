@@ -80,4 +80,61 @@ ion-content {
             }
         }
     }
+    .transacao-container {
+        padding: 8px;
+        margin-bottom: 20px;
+        ion-row {
+            display: flex;
+            align-items: center;
+            ion-col {
+                ion-avatar {
+                    background: var(--ion-color-success-shade);
+                    width: 32px;
+                    height: 32px;
+                    padding: 8px;
+                    ion-icon {
+                        color: #FFFFFF;
+                    }
+                }
+                #favorecido {
+                    font-size: 12px;
+                    margin-left: 10px;
+                    p {
+                        font-size: 10px;
+                        margin-left: 10px;
+                    }
+                }
+                #valorTransacao {
+                    font-size: 11px;
+                    ion-label {
+                        p {
+                            display: flex;
+                            justify-content: flex-end;
+                            ion-avatar {
+                                width: 16px;
+                                height: 16px;
+                                padding: 1px;
+                                ion-icon {
+                                    font-size: 10px;
+                                    border: transparent 2px dashed;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .isTransacaoPendente {
+        background: var(--ion-color-danger) !important;
+    }
+    .isTransacaoPaga {
+        background: var(--ion-color-success) !important;
+    }
+    .isTransacaoPendenteTexto {
+        color: var(--ion-color-danger) !important;
+    }
+    .isTransacaoPagaTexto {
+        color: var(--ion-color-success) !important;
+    }
 }
