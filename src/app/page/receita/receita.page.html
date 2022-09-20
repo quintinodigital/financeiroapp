@@ -80,11 +80,10 @@
 
   <div class="transacao-container">
 
-    <h6><b>Hoje</b></h6>
+    <!-- <h6><b>{{item.dataPagamento}}</b></h6> -->
 
     <ion-grid>
-
-      <ion-row>
+      <ion-row *ngFor="let item of receitaList">
         <ion-col size="1">
           <ion-avatar>
             <ion-icon name="card-outline"></ion-icon>
@@ -92,24 +91,23 @@
         </ion-col>
         <ion-col size="8">
           <ion-label id="favorecido">
-            <b>Mirante Tecnologia da Informação</b>
-            <p>Salário | Banco do Brasil</p>
+            <b>{{item.pessoaOrigemPagamento}}</b>
+            <p>{{item.categoriaTransacao}} | {{item.contaBancariaDestino}}</p>
           </ion-label>
         </ion-col>
         <ion-col size="3">
           <ion-label id="valorTransacao">
             <ion-label>
-              <b [ngClass]="isPagamentoPendente ? 'isTransacaoPendenteTexto' : 'isTransacaoPagaTexto'">R$ 5.000,00</b>
+              <b>{{item.valorPagamento}}</b>
               <p>
-                <ion-avatar [ngClass]="isPagamentoPendente ? 'isTransacaoPendente' : 'isTransacaoPaga'">
-                  <ion-icon [name]="isVerificarPagamentoPendente()"></ion-icon>
+                <ion-avatar [ngClass]="isVerificarPagamentoPendenteTexto(item.dataPagamento)">
+                  <ion-icon [name]="isVerificarPagamentoPendenteIcone(item.dataPagamento)"></ion-icon>
                 </ion-avatar>
               </p>
             </ion-label>
           </ion-label>
         </ion-col>
       </ion-row>
-
     </ion-grid>
 
   </div>

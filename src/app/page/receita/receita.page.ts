@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ReceitaPage implements OnInit {
 
   public isSemTransacao = false;
-  public isPagamentoPendente = false;
+  public isPagamentoPendente: boolean;
 
   public nomeMes: String = "";
   public numeroMesCorrente: any = 0;
@@ -26,7 +26,34 @@ export class ReceitaPage implements OnInit {
     { nome: "Outubro" },
     { nome: "Novembro" },
     { nome: "Dezembro" }
-  ]
+  ];
+
+  public receitaList = [
+    {
+      "codigo": 1,
+      "pessoaOrigemPagamento": "Mirante Tecnologia da Informação",
+      "valorPagamento": "R$ 10.000,00",
+      "categoriaTransacao": "Salário",
+      "contaBancariaDestino": "Banco do Brasil",
+      "dataPagamento": "10/09/2022",
+    },
+    {
+      "codigo": 2,
+      "pessoaOrigemPagamento": "Django Comunicações",
+      "valorPagamento": "R$ 2.000,00",
+      "categoriaTransacao": "Renda Extra",
+      "contaBancariaDestino": "Banco Santader",
+      "dataPagamento": "",
+    },
+    {
+      "codigo": 3,
+      "pessoaOrigemPagamento": "Priscilla da Silva Mariano",
+      "valorPagamento": "R$ 1.000,00",
+      "categoriaTransacao": "Empréstimo",
+      "contaBancariaDestino": "Banco Digio",
+      "dataPagamento": "22/09/2022",
+    }
+  ];
 
   constructor() { }
 
@@ -51,11 +78,21 @@ export class ReceitaPage implements OnInit {
     return this.nomeMes = this.mesAnoList[this.numeroMesCorrente+indice].nome
   }
 
-  public isVerificarPagamentoPendente() {
+  public isVerificarPagamentoPendenteIcone(dataPagamentoReceita: any) {
+    this.isPagamentoPendente = (dataPagamentoReceita == undefined || dataPagamentoReceita == null || dataPagamentoReceita == "");
     if(this.isPagamentoPendente) {
       return "pin-outline";
     } else {
       return "checkmark-outline";
+    }
+  }
+
+  public isVerificarPagamentoPendenteTexto(dataPagamentoReceita: any) {
+    this.isPagamentoPendente = (dataPagamentoReceita == undefined || dataPagamentoReceita == null || dataPagamentoReceita == "");
+    if(this.isPagamentoPendente) {
+      return "isTransacaoPendente";
+    } else {
+      return "isTransacaoPaga";
     }
   }
 

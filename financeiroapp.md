@@ -6,7 +6,8 @@
 
     # FINANCEIROAPP0220092022FEATURE
 
-        - Implementar protótipo da lista de Receitas na Tela Principal
+        - [x] Implementar protótipo da lista de Receitas na Tela Principal
+        - [x] Implementar controle de Icones de acordo com a situação (Pago ou Pendente)
 
     # FINANCEIROAPP01XX092022HOTFIX
 
