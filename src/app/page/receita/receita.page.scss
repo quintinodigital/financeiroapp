@@ -106,6 +106,8 @@ ion-content {
                 }
                 #valorTransacao {
                     font-size: 11px;
+                    display: flex;
+                    justify-content: flex-end;
                     ion-label {
                         p {
                             display: flex;
