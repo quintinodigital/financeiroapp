@@ -42,7 +42,7 @@
           <ion-icon name="bag-outline"></ion-icon>
           <ion-label>
             Total Pendente
-            <p>R$ {{totalTransacaoPaga}}</p>
+            <p>{{ totalTransacaoPaga | currency }}</p>
           </ion-label>
         </ion-col>
 
@@ -50,7 +50,7 @@
           <ion-icon name="wallet-outline"></ion-icon>
           <ion-label>
             Total Recebido
-            <p>R$ {{totalTransacaoPendente}}</p>
+            <p>{{ totalTransacaoPendente | currency }}</p>
           </ion-label>
         </ion-col>
 
@@ -98,7 +98,7 @@
         <ion-col size="3">
           <ion-label id="valorTransacao">
             <ion-label>
-              <b>R$ {{item.valorPagamento}}</b>
+              <b>{{ item.valorPagamento | currency }}</b>
               <p>
                 <ion-avatar [ngClass]="isVerificarPagamentoPendenteTexto(item.dataPagamento)">
                   <ion-icon [name]="isVerificarPagamentoPendenteIcone(item.dataPagamento)"></ion-icon>
