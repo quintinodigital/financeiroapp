@@ -4,7 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'tabmenu',
+    redirectTo: 'receita',
     pathMatch: 'full'
   },
   {
@@ -19,10 +19,10 @@ const routes: Routes = [
     path: "despesa-cadastrar",
     loadChildren: () => import('./page/despesa/despesa-cadastrar/despesa-cadastrar.module').then( m => m.DespesaCadastrarPageModule)
   },
-  // {
-  //   path: "receita",
-  //   loadChildren: () => import('./page/receita/receita.module').then( m => m.ReceitaPageModule)
-  // }
+  {
+    path: "receita",
+    loadChildren: () => import('./page/receita/receita.module').then( m => m.ReceitaPageModule)
+  }
 ];
 
 @NgModule({

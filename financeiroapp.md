@@ -18,14 +18,14 @@
 
         - Corrigir lentidão nas rotas do aplicativo
 
-    # FINANCEIROAPP0320092022HOTFIX
+    # FINANCEIROAPP0321092022HOTFIX
 
-        - Corrigir alinhamento dos Totalizadores na Tela principal de Receita
+        - [x] Corrigir alinhamento dos Totalizadores na Tela principal de Receita
 
-    # FINANCEIROAPP01XX092022HOTFIX
+    # FINANCEIROAPP0421092022HOTFIX
 
         - Corrigir navegação de filtro dos meses na Tela principal de Receita
 
     # FINANCEIROAPP0YXX092022FEATURE
 
-        - [] Implementar 
+        - [] Implementar detalhamento de Receitas
