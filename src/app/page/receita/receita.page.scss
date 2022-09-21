@@ -27,33 +27,30 @@ ion-header {
         }
     }
     .totalizador {
-        background: #FFFFFF;
-        border-radius: 10px 10px 0px 0px;
-        margin-top: -10px;
-        padding: 2px;
         ion-grid {
+            background: #FFFFFF;
             ion-row {
                 ion-col {
-                    ion-icon {
-                        font-size: 20px;
-                        position: absolute;
-                        color: #747474;
-                        margin-top: 6%;
-                    }
-                    ion-label {
-                        margin-left: 30px;
-                        font-size: 12px;
-                        font-weight: bold;
+                    display: flex;
+                    .imagem {
+                        display: flex;
+                        align-self: center;
+                        font-size: 22px;
                         color: #646464;
-                        p {
-                            margin-left: 32px;
-                            color: #4cb050;
+                    }
+                    .valoresTotalizador {
+                        margin-left: 20px;
+                        ion-label {
                             font-weight: bold;
+                            color: #4cb050;
                         }
                     }
                 }
             }
         }
+    }
+    .divider {
+        border: #dedede solid 1px;
     }
 }
 
@@ -97,7 +94,7 @@ ion-content {
                     }
                 }
                 #favorecido {
-                    font-size: 12px;
+                    font-size: 13px;
                     margin-left: 10px;
                     p {
                         font-size: 10px;

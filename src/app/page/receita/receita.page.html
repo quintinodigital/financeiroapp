@@ -39,25 +39,33 @@
       <ion-row>
 
         <ion-col>
-          <ion-icon name="bag-outline"></ion-icon>
-          <ion-label>
-            Total Pendente
-            <p>{{ totalTransacaoPaga | currency }}</p>
-          </ion-label>
+          <div class="imagem">
+            <ion-icon name="bag-outline"></ion-icon>
+          </div>
+          <div class="valoresTotalizador">
+            <ion-label>
+              Total Pendente
+              <p>{{ totalTransacaoPaga | currency }}</p>
+            </ion-label>
+          </div>
         </ion-col>
 
         <ion-col>
-          <ion-icon name="wallet-outline"></ion-icon>
-          <ion-label>
-            Total Recebido
-            <p>{{ totalTransacaoPendente | currency }}</p>
-          </ion-label>
+          <div class="imagem">
+            <ion-icon name="wallet-outline"></ion-icon>
+          </div>
+          <div class="valoresTotalizador">
+            <ion-label>
+              Total Pendente
+              <p>{{ totalTransacaoPaga | currency }}</p>
+            </ion-label>
+          </div>
         </ion-col>
-
-        <ion-item-divider style="margin-top: -12px;"></ion-item-divider>
 
       </ion-row>
     </ion-grid>
+
+    <div class="divider"></div>
 
   </div>
 
