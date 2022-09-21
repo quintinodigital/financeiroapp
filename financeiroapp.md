@@ -22,7 +22,7 @@
 
         - [x] Corrigir alinhamento dos Totalizadores na Tela principal de Receita
 
-    # FINANCEIROAPP01XX092022HOTFIX
+    # FINANCEIROAPP0421092022HOTFIX
 
         - Corrigir navegação de filtro dos meses na Tela principal de Receita
 
