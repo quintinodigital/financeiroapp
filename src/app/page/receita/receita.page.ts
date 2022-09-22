@@ -34,7 +34,7 @@ export class ReceitaPage implements OnInit {
   public receitaList = [
     {
       "codigo": 1,
-      "pessoaOrigemPagamento": "Mirante Tecnologia da Informação",
+      "pessoaOrigemPagamento": "Mirante Tecnologia",
       "valorPagamento": 5000,
       "categoriaTransacao": "Salário",
       "contaBancariaDestino": "Banco do Brasil",

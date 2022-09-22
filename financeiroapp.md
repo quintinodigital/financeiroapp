@@ -29,3 +29,7 @@
     # FINANCEIROAPP0122092022FEATURE
 
         - [] Implementar detalhamento de Receitas
+
+    # FINANCEIROAPP0221092022HOTFIX
+
+        - [x] Correções gerais de layout

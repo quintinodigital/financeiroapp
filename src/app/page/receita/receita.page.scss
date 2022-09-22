@@ -42,9 +42,11 @@ ion-header {
                         margin-left: 20px;
                         ion-label {
                             font-weight: bold;
-                            color: #4cb050;
+                            color: #646464;
+                            font-size: 12px;
                             p {
                                 margin-top: 6px;
+                                color: #4cb050;
                             }
                         }
                     }
@@ -53,7 +55,11 @@ ion-header {
         }
     }
     .divider {
-        border: #dedede solid 1px;
+        hr {
+            background: #ececec;
+            width: 96%;
+            border-radius: 10px;
+        }
     }
 }
 
@@ -109,6 +115,9 @@ ion-content {
                     display: flex;
                     justify-content: flex-end;
                     ion-label {
+                        b {
+                            color: #4cb050;
+                        }
                         p {
                             display: flex;
                             justify-content: flex-end;
