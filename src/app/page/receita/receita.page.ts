@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-receita',
@@ -57,7 +58,9 @@ export class ReceitaPage implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(
+    private alertController: AlertController
+  ) { }
 
   ngOnInit() { 
     this.nomeMes = this.mesAnoList[8].nome;
@@ -77,8 +80,11 @@ export class ReceitaPage implements OnInit {
     }
   }
 
-  public recuperarMesPosterior(indice: number) { 
-    return this.nomeMes = this.mesAnoList[this.numeroMesCorrente+indice].nome
+  public async recuperarMesPosterior(indice: number) {
+    var indice = this.numeroMesCorrente++;
+    if(indice+1 >= 0) {
+      return this.nomeMes = this.mesAnoList[indice+1].nome;
+    }
   }
 
   public isVerificarPagamentoPendenteIcone(dataPagamentoReceita: any) {

@@ -20,13 +20,13 @@
   <div class="periodo">
     <ion-toolbar>
       <ion-buttons slot="start">
-        <ion-button (click)="recuperarMesAnterior()">
+        <ion-button (click)="recuperarMesAnterior()" [disabled]="numeroMesCorrente < 1">
           <ion-icon name="chevron-back-outline" class="ion-text-right"></ion-icon>
         </ion-button>
       </ion-buttons>
       <ion-title class="ion-text-center">{{nomeMes}}</ion-title>
       <ion-buttons slot="end">
-        <ion-button (click)="recuperarMesPosterior(1)">
+        <ion-button (click)="recuperarMesPosterior(1)" [disabled]="numeroMesCorrente > 10">
           <ion-icon name="chevron-forward-outline" class="ion-text-left"></ion-icon>
         </ion-button>
       </ion-buttons>
