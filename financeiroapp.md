@@ -24,8 +24,8 @@
 
     # FINANCEIROAPP0421092022HOTFIX
 
-        - Corrigir navegação de filtro dos meses na Tela principal de Receita
+        - [x] Corrigir navegação de filtro dos meses na Tela principal de Receita
 
-    # FINANCEIROAPP0YXX092022FEATURE
+    # FINANCEIROAPP0122092022FEATURE
 
         - [] Implementar detalhamento de Receitas
