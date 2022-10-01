@@ -3,14 +3,14 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'receita',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "receita-cadastrar",
+    pathMatch: "full"
   },
-  {
-    path: 'tabmenu',
-    loadChildren: () => import('./component/tabmenu/tabmenu.module').then( m => m.TabmenuPageModule)
-  },
+  // {
+  //   path: '',
+  //   loadChildren: () => import('./component/tabmenu/tabmenu.module').then( m => m.TabmenuPageModule)
+  // },
   {
     path: "receita-cadastrar",
     loadChildren: () => import('./page/receita/receita-cadastrar/receita-cadastrar.module').then( m => m.ReceitaCadastrarPageModule)
@@ -19,10 +19,6 @@ const routes: Routes = [
     path: "despesa-cadastrar",
     loadChildren: () => import('./page/despesa/despesa-cadastrar/despesa-cadastrar.module').then( m => m.DespesaCadastrarPageModule)
   },
-  {
-    path: "receita",
-    loadChildren: () => import('./page/receita/receita.module').then( m => m.ReceitaPageModule)
-  }
 ];
 
 @NgModule({

@@ -14,7 +14,7 @@
 
         - [x] Configurar os tipos monetários para o formato brasileiro
 
-    # FINANCEIROAPP01XX092022HOTFIX
+    # FINANCEIROAPP0101102022HOTFIX
 
         - Corrigir lentidão nas rotas do aplicativo
 
