@@ -8,6 +8,8 @@ import { RedirecionadorService } from './../../../service/redirecionador.service
 })
 export class ReceitaCadastrarPage implements OnInit {
 
+  
+
   constructor(
     private redirecionadorService: RedirecionadorService
   ) { }

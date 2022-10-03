@@ -1,14 +1,56 @@
-<ion-header>
+<ion-header class="ion-no-border">
+
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-button (click)="redirecionarTelaAnterior()">
-        <ion-icon name="return-up-back-outline"></ion-icon>
+        <ion-icon name="arrow-back-outline"></ion-icon>
       </ion-button>
     </ion-buttons>
     <ion-title>Nova Receita</ion-title>
   </ion-toolbar>
+
+  <div class="container-faixa-valor ion-padding">
+
+    <div class="faixa-valor">
+      <ion-text>Valor da Receita</ion-text>
+    </div>
+  
+    <div class="faixa-moeda">
+      <p>R$ 0,00</p>
+      <b>BRL <ion-icon name="caret-down-outline"></ion-icon></b>
+    </div>
+
+  </div>
+
+  <div class="topo-card"></div>
+
 </ion-header>
 
-<ion-content>
+<ion-content class="ion-padding">
+
+  <div class="card-formulario">
+
+    <ion-icon name="checkmark-circle-outline"></ion-icon>
+
+    <ion-label>Recebido</ion-label>
+
+    <ion-toggle color="success"></ion-toggle>
+
+  </div>
+
+  <hr/>
+
+  <ion-item>
+    <ion-icon name="calendar-number-outline"></ion-icon>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <!-- <ion-datetime
+  value="2022-04-21T00:00:00"
+  min="2022-03-01T00:00:00"
+  max="2022-05-31T23:59:59"
+>
+<span slot="title">Select a Reservation Date</span>
+</ion-datetime> -->
 
 </ion-content>
